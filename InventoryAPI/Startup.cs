@@ -25,11 +25,11 @@ namespace InventoryAPI
         {
 
 
-            var connectionString = "Host=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_HOST") + ";" +
-                                "Database=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_NAME") + ";" +
-                                "Username=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_USER") + ";" +
-                                "Password=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_PASSWORD") + ";" +
-                                "Port=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_PORT") + ";";
+            var connectionString = "Host=" + Environment.GetEnvironmentVariable("POSTGRES_HOST") + ";" +
+                                "Database=" + Environment.GetEnvironmentVariable("POSTGRES_DB") + ";" +
+                                "Username=" + Environment.GetEnvironmentVariable("POSTGRES_USER") + ";" +
+                                "Password=" + Environment.GetEnvironmentVariable("POSTGRES_PASSWORD") + ";" +
+                                "Port=" + Environment.GetEnvironmentVariable("POSTGRES_PORT") + ";";
 
 
             //var connectionString = "Host=" + Environment.GetEnvironmentVariable("localhost") + ";" +
