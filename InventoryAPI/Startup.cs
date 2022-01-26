@@ -31,6 +31,12 @@ namespace InventoryAPI
                                 "Password=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_PASSWORD") + ";" +
                                 "Port=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_PORT") + ";";
 
+
+            //var connectionString = "Host=" + Environment.GetEnvironmentVariable("localhost") + ";" +
+            //                    "Database=" + Environment.GetEnvironmentVariable("postgres") + ";" +
+            //                    "Username=" + Environment.GetEnvironmentVariable("postgres") + ";" +
+            //                    "Password=" + Environment.GetEnvironmentVariable("316134") + ";" +
+            //                    "Port=" + Environment.GetEnvironmentVariable("5432") + ";";
             services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 
             //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("InventoryDBConnectionString")));
