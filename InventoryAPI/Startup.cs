@@ -25,15 +25,15 @@ namespace InventoryAPI
         {
 
 
-            //var connectionString = "Host=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_HOST") + ";" +
-            //                    "Database=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_NAME") + ";" +
-            //                    "Username=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_USER") + ";" +
-            //                    "Password=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_PASSWORD") + ";" +
-            //                    "Port=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_PORT") + ";";
+            var connectionString = "Host=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_HOST") + ";" +
+                                "Database=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_NAME") + ";" +
+                                "Username=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_USER") + ";" +
+                                "Password=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_PASSWORD") + ";" +
+                                "Port=" + Environment.GetEnvironmentVariable("INVENTORYSERVICE_DB_PORT") + ";";
 
-            //services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
+            services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 
-            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("InventoryDBConnectionString")));
+            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("InventoryDBConnectionString")));
 
 
             services.AddControllers();
