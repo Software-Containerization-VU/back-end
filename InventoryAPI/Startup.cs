@@ -31,7 +31,7 @@ namespace InventoryAPI
                                 "Password=" + Environment.GetEnvironmentVariable("POSTGRES_PASSWORD") + ";" +
                                 "Port=" + Environment.GetEnvironmentVariable("POSTGRES_PORT") + ";";
 
-            //var connectionString = "Host=localhost;Database=postgres;Username=postgres;Password=316134;Port=5432;";
+            //var connectionString = "Host=localhost;Database=guru99;Username=postgres;Password=316134;Port=5432;";
 
             //var connectionString = "Host=" + Environment.GetEnvironmentVariable("localhost") + ";" +
             //                    "Database=" + Environment.GetEnvironmentVariable("postgres") + ";" +

@@ -3,6 +3,7 @@ using InventoryAPI.Seeds;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Linq;
 
 namespace InventoryAPI.Helpers
@@ -11,9 +12,19 @@ namespace InventoryAPI.Helpers
     {
         public void ApplyMigrations(ApplicationDbContext context)
         {
-            if (context.Database.GetPendingMigrations().Any())
+            try
             {
-                context.Database.Migrate();
+                if (!context.Products.Any())
+                {
+                }
+            }
+            catch(Exception e)
+            {
+
+                if (context.Database.GetPendingMigrations().Any())
+                {
+                    context.Database.Migrate();
+                }
             }
         }
 
