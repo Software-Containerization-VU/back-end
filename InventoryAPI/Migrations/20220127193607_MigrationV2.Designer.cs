@@ -9,8 +9,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace InventoryAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220126123928_MigrationV1")]
-    partial class MigrationV1
+    [Migration("20220127193607_MigrationV2")]
+    partial class MigrationV2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

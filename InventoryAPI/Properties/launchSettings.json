@@ -6,20 +6,14 @@
       "launchUrl": "product",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "INVENTORYSERVICE_DB_NAME": "network_pg ",
-        "INVENTORYSERVICE_DB_PASSWORD": "group6-ftw!",
-        "INVENTORYSERVICE_DB_USER": "postgresadmin",
-        "INVENTORYSERVICE_DB_HOST": "host.docker.internal",
-        "INVENTORYSERVICE_DB_PORT": "5432"
+        //"INVENTORYSERVICE_DB_NAME": "network_pg ",
+        //"INVENTORYSERVICE_DB_PASSWORD": "group6-ftw!",
+        //"INVENTORYSERVICE_DB_USER": "postgresadmin",
+        //"INVENTORYSERVICE_DB_HOST": "host.docker.internal",
+        //"INVENTORYSERVICE_DB_PORT": "5432"
       },
       "applicationUrl": "http://localhost:5000",
       "dotnetRunMessages": "true"
     },
-    "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/product",
-      "publishAllPorts": true
-    }
   }
 }

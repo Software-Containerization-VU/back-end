@@ -31,6 +31,7 @@ namespace InventoryAPI
                                 "Password=" + Environment.GetEnvironmentVariable("POSTGRES_PASSWORD") + ";" +
                                 "Port=" + Environment.GetEnvironmentVariable("POSTGRES_PORT") + ";";
 
+            //var connectionString = "Host=localhost;Database=guru99;Username=postgres;Password=316134;Port=5432;";
 
             //var connectionString = "Host=" + Environment.GetEnvironmentVariable("localhost") + ";" +
             //                    "Database=" + Environment.GetEnvironmentVariable("postgres") + ";" +
@@ -53,8 +54,6 @@ namespace InventoryAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            //Seed the db on init
-            //context.Seed();
 
             app.UseRouting();
 
@@ -66,8 +65,11 @@ namespace InventoryAPI
             });
 
             MigrationHelper migrationHelper = new MigrationHelper();
-            migrationHelper.Migrate(app);
-            //migration.ApplyMigrations(context);
+            //migrationHelper.Migrate(app);
+            migrationHelper.ApplyMigrations(context);
+
+            //Seed the db on init
+            context.Seed();
         }
     }
 }
