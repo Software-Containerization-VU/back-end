@@ -23,8 +23,6 @@ namespace InventoryAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
-
 
             var connectionString = "Host=" + Environment.GetEnvironmentVariable("POSTGRES_HOST") + ";" +
                                 "Database=" + Environment.GetEnvironmentVariable("POSTGRES_DB") + ";" +
@@ -43,7 +41,7 @@ namespace InventoryAPI
 
             //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("InventoryDBConnectionString")));
 
-
+            services.AddCors();
             services.AddControllers();
         }
 
@@ -66,7 +64,7 @@ namespace InventoryAPI
                 .AllowCredentials()); // allow 
 
 
-            app.UseAuthorization();
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
