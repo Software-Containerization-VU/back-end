@@ -24,7 +24,6 @@ namespace InventoryAPI
         public void ConfigureServices(IServiceCollection services)
         {
 
-
             var connectionString = "Host=" + Environment.GetEnvironmentVariable("POSTGRES_HOST") + ";" +
                                 "Database=" + Environment.GetEnvironmentVariable("POSTGRES_DB") + ";" +
                                 "Username=" + Environment.GetEnvironmentVariable("POSTGRES_USER") + ";" +
@@ -42,7 +41,7 @@ namespace InventoryAPI
 
             //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("InventoryDBConnectionString")));
 
-
+            services.AddCors();
             services.AddControllers();
         }
 
@@ -54,10 +53,18 @@ namespace InventoryAPI
                 app.UseDeveloperExceptionPage();
             }
 
-
             app.UseRouting();
 
-            app.UseAuthorization();
+
+            // global cors policy
+            app.UseCors(x => x
+                .AllowAnyMethod()
+                .AllowAnyHeader()
+                .SetIsOriginAllowed(origin => true) // allow any origin
+                .AllowCredentials()); // allow 
+
+
+            //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

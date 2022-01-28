@@ -73,6 +73,7 @@ C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyIn
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\Npgsql.dll
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.csproj.AssemblyReference.cache
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.GeneratedMSBuildEditorConfig.editorconfig
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.AssemblyInfoInputs.cache
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.AssemblyInfo.cs
@@ -86,4 +87,3 @@ C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.dll
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\ref\InventoryAPI.dll
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.pdb
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.genruntimeconfig.cache
-C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.csproj.AssemblyReference.cache
