@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: inventory-api-lb
+  name: inventory-api-clusterip
   labels:
     app: inventory-api
 spec:
-  type: LoadBalancer
+  type: ClusterIp
   ports:
     - port: 8090
       targetPort: 80
