@@ -5,7 +5,7 @@ metadata:
   labels:
     app: inventory-api
 spec:
-  type: ClusterIp
+  type: ClusterIP
   ports:
     - port: 8090
       targetPort: 80
