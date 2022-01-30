@@ -18,8 +18,29 @@ spec:
           image: docker.io/macsi21/inventory-api:v5
           ports:
             -  containerPort: 80
-          envFrom: # Defines all ConfigMap's and Secret's data as container environment variables
-            - configMapRef: 
+          env:
+          - name: POSTGRES_HOST
+            value: postgres-clusterip.default.svc.cluster.local
+          - name: POSTGRES_PORT
+            value: "5432"
+          - name: POSTGRES_DB
+            valueFrom:
+              configMapKeyRef:
                 name: postgres-config
-            - secretRef:
+                key: POSTGRES_DB
+          - name: POSTGRES_USER
+            valueFrom:
+              configMapKeyRef:
+                name: postgres-config
+                key: POSTGRES_USER
+          - name: POSTGRES_PASSWORD
+            valueFrom:
+              secretKeyRef:
                 name: postgres-secret
+                key: POSTGRES_PASSWORD
+          
+          # envFrom: # Defines all ConfigMap's and Secret's data as container environment variables
+          #   - configMapRef: 
+          #       name: postgres-config
+            # - secretRef:
+            #     name: postgres-secret
