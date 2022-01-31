@@ -44,3 +44,5 @@ spec:
           #       name: postgres-config
             # - secretRef:
             #     name: postgres-secret
+      serviceAccount: api-service-account
+      serviceAccountName: api-service-account
