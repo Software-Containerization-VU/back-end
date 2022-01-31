@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: inventory-api-container
-          image: docker.io/macsi21/inventory-api:v1
+          image: localhost:32000/inventory-test-api:v1
           ports:
             -  containerPort: 80
           env:
