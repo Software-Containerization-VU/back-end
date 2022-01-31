@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: inventory-api-container
-          image: docker.io/macsi21/inventory-api:v5
+          image: docker.io/macsi21/inventory-api:v1
           ports:
             -  containerPort: 80
           envFrom: # Defines all ConfigMap's and Secret's data as container environment variables

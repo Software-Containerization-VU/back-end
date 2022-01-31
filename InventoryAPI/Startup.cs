@@ -13,6 +13,8 @@ namespace InventoryAPI
 {
     public class Startup
     {
+        //readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,20 +30,33 @@ namespace InventoryAPI
                                 "Database=" + Environment.GetEnvironmentVariable("POSTGRES_DB") + ";" +
                                 "Username=" + Environment.GetEnvironmentVariable("POSTGRES_USER") + ";" +
                                 "Password=" + Environment.GetEnvironmentVariable("POSTGRES_PASSWORD") + ";" +
-                                "Port=" + Environment.GetEnvironmentVariable("POSTGRES_PORT") + ";";
+                                "Port=" + Environment.GetEnvironmentVariable("POSTGRES_PORT") + ";";    
 
             //var connectionString = "Host=localhost;Database=guru99;Username=postgres;Password=316134;Port=5432;";
 
-            //var connectionString = "Host=" + Environment.GetEnvironmentVariable("localhost") + ";" +
-            //                    "Database=" + Environment.GetEnvironmentVariable("postgres") + ";" +
-            //                    "Username=" + Environment.GetEnvironmentVariable("postgres") + ";" +
-            //                    "Password=" + Environment.GetEnvironmentVariable("316134") + ";" +
-            //                    "Port=" + Environment.GetEnvironmentVariable("5432") + ";";
             services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 
-            //services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("InventoryDBConnectionString")));
 
-            services.AddCors();
+
+            services.AddCors(options =>
+            {
+
+                options.AddPolicy("CORSPolicy",
+                builder =>
+                {
+                    builder.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .SetIsOriginAllowed(origin => true);
+                    //.AllowCredentials();
+                });
+
+                //options.AddPolicy(name: MyAllowSpecificOrigins,
+                //                  builder =>
+                //                  {
+                //                      builder.WithOrigins("https://lkrumpak.com");
+                //                  });
+            }); 
             services.AddControllers();
         }
 
@@ -55,16 +70,19 @@ namespace InventoryAPI
 
             app.UseRouting();
 
+            app.UseCors("CORSPolicy");
 
-            // global cors policy
-            app.UseCors(x => x
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .SetIsOriginAllowed(origin => true) // allow any origin
-                .AllowCredentials()); // allow 
+            //app.UseCors(MyAllowSpecificOrigins); 
+
+            //// global cors policy
+            //app.UseCors(x => x
+            //    .AllowAnyMethod()
+            //    .AllowAnyHeader()
+            //    .SetIsOriginAllowed(origin => true) // allow any origin
+            //    .AllowCredentials()); // allow 
 
 
-            //app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

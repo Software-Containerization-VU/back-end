@@ -55,6 +55,11 @@ C:\scul\InventoryAPI\obj\Debug\net5.0\InventoryAPI.dll
 C:\scul\InventoryAPI\obj\Debug\net5.0\ref\InventoryAPI.dll
 C:\scul\InventoryAPI\obj\Debug\net5.0\InventoryAPI.pdb
 C:\scul\InventoryAPI\obj\Debug\net5.0\InventoryAPI.genruntimeconfig.cache
+C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.AssemblyInfoInputs.cache
+C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.AssemblyInfo.cs
+C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.csproj.CoreCompileInputs.cache
+C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\appsettings.Development.json
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\appsettings.json
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\InventoryAPI.exe
@@ -73,12 +78,6 @@ C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\Microsoft.Extensions.DependencyIn
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\Npgsql.dll
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\scul\back-end\InventoryAPI\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.csproj.AssemblyReference.cache
-C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.GeneratedMSBuildEditorConfig.editorconfig
-C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.AssemblyInfoInputs.cache
-C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.AssemblyInfo.cs
-C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.csproj.CoreCompileInputs.cache
-C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\scopedcss\bundle\InventoryAPI.styles.css
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\staticwebassets\InventoryAPI.StaticWebAssets.Manifest.cache
 C:\scul\back-end\InventoryAPI\obj\Debug\net5.0\InventoryAPI.RazorTargetAssemblyInfo.cache
