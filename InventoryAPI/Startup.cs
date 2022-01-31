@@ -38,25 +38,25 @@ namespace InventoryAPI
 
 
 
-            services.AddCors(options =>
-            {
+            //services.AddCors(options =>
+            //{
 
-                options.AddPolicy("CORSPolicy",
-                builder =>
-                {
-                    builder.AllowAnyOrigin()
-                    .AllowAnyHeader()
-                    .AllowAnyMethod()
-                    .SetIsOriginAllowed(origin => true);
-                    //.AllowCredentials();
-                });
+            //    options.AddPolicy("CORSPolicy",
+            //    builder =>
+            //    {
+            //        builder.AllowAnyOrigin()
+            //        .AllowAnyHeader()
+            //        .AllowAnyMethod()
+            //        .SetIsOriginAllowed(origin => true);
+            //        //.AllowCredentials();
+            //    });
 
-                //options.AddPolicy(name: MyAllowSpecificOrigins,
-                //                  builder =>
-                //                  {
-                //                      builder.WithOrigins("https://lkrumpak.com");
-                //                  });
-            }); 
+            //    //options.AddPolicy(name: MyAllowSpecificOrigins,
+            //    //                  builder =>
+            //    //                  {
+            //    //                      builder.WithOrigins("https://lkrumpak.com");
+            //    //                  });
+            //}); 
             services.AddControllers();
         }
 
@@ -70,7 +70,15 @@ namespace InventoryAPI
 
             app.UseRouting();
 
-            app.UseCors("CORSPolicy");
+            app.UseCors(builder => builder
+               .AllowAnyHeader()
+               .AllowAnyMethod()
+               .SetIsOriginAllowed((host) => true)
+               .AllowCredentials()
+            );
+
+
+            //app.UseCors("CORSPolicy");
 
             //app.UseCors(MyAllowSpecificOrigins); 
 
