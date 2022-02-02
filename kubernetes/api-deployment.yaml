@@ -38,6 +38,12 @@ spec:
               secretKeyRef:
                 name: postgres-secret
                 key: POSTGRES_PASSWORD
+          readinessProbe:
+            httpGet:
+              path: "/hc"
+              port: 80
+            initialDelaySeconds: 10
+            timeoutSeconds: 5
           
           # envFrom: # Defines all ConfigMap's and Secret's data as container environment variables
           #   - configMapRef: 
