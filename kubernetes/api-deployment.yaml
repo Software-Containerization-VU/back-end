@@ -15,7 +15,13 @@ spec:
     spec:
       containers:
         - name: inventory-api-container
-          image: docker.io/macsi21/inventory-api:v1
+          image: docker.io/macsi21/inventory-api:v9
+          readinessProbe:
+            healthCheck:
+              path: "/hc"
+              port: 80
+            initialDelaySeconds: 10
+            timeoutSeconds: 5
           ports:
             -  containerPort: 80
           env:
@@ -38,11 +44,6 @@ spec:
               secretKeyRef:
                 name: postgres-secret
                 key: POSTGRES_PASSWORD
-          
-          # envFrom: # Defines all ConfigMap's and Secret's data as container environment variables
-          #   - configMapRef: 
-          #       name: postgres-config
-            # - secretRef:
-            #     name: postgres-secret
-      serviceAccount: api-service-account
-      serviceAccountName: api-service-account
+    
+      # serviceAccount: api-service-account
+      # serviceAccountName: api-service-account
